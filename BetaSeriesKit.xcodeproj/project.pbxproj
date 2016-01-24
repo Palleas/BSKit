@@ -22,6 +22,7 @@
 		7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABB1C25F26D00327E58 /* Episode.swift */; };
 		7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABD1C25F27E00327E58 /* Show.swift */; };
 		7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB816331C30CB7800F3885D /* ClientSpec.swift */; };
+		7AE5CAA91C54570A00D1BFC7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		7AB2DABB1C25F26D00327E58 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		7AB2DABD1C25F27E00327E58 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		7AB816331C30CB7800F3885D /* ClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSpec.swift; sourceTree = "<group>"; };
+		7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				7AB2DAB91C25F25200327E58 /* Member.swift */,
 				7AB2DABB1C25F26D00327E58 /* Episode.swift */,
 				7AB2DABD1C25F27E00327E58 /* Show.swift */,
+				7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */,
 			);
 			path = BetaSeriesKit;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				7AB2DAB11C25F0D600327E58 /* Client.swift in Sources */,
 				7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */,
 				7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */,
+				7AE5CAA91C54570A00D1BFC7 /* Helpers.swift in Sources */,
 				7AB2DABA1C25F25200327E58 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

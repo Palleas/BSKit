@@ -1,6 +1,6 @@
 import Foundation
 import ReactiveCocoa
 
-class Client {
-    
+public class Client {
+    static public let lol = "String"
 }

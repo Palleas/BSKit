@@ -9,6 +9,7 @@
 import UIKit
 import Quick
 import Nimble
+@testable import BetaSeriesKit
 
 class ClientSpec: QuickSpec {
     override func spec() {
@@ -18,7 +19,11 @@ class ClientSpec: QuickSpec {
             }
             
             it("should extract the code from the completion URL") {
+                let validURL = NSURL(string: "app://callback?code=1234567890")!
+                expect(codeFromURL(validURL)).to(equal("1234567890"))
                 
+                let invalidURL = NSURL(string: "app://callback")!
+                expect(codeFromURL(invalidURL)).to(beNil())
             }
             
             it("should request a token") {
