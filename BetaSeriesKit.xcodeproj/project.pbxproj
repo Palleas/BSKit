@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A8CFBD31C6022170082F7C2 /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CFBD21C6022170082F7C2 /* RequestToken.swift */; };
+		7A8CFBD41C6029D50082F7C2 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A8CFBD61C6029F30082F7C2 /* RequestTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */; };
 		7AB2DA7B1C25EBC500327E58 /* BetaSeriesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB2DA7A1C25EBC500327E58 /* BetaSeriesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AB2DAA21C25EDAC00327E58 /* BetaSeriesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DA771C25EBC500327E58 /* BetaSeriesKit.framework */; };
 		7AB2DAAA1C25F04000327E58 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DA921C25EC1C00327E58 /* Nimble.framework */; };
@@ -22,7 +25,14 @@
 		7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABB1C25F26D00327E58 /* Episode.swift */; };
 		7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABD1C25F27E00327E58 /* Show.swift */; };
 		7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB816331C30CB7800F3885D /* ClientSpec.swift */; };
+		7ACD616B1C5ED43500B4E2CC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD616A1C5ED43500B4E2CC /* Request.swift */; };
+		7ACD616D1C5ED5DD00B4E2CC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */; };
+		7ACD616E1C5ED60500B4E2CC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */; };
 		7AE5CAA91C54570A00D1BFC7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */; };
+		7AE5CAAD1C54614500D1BFC7 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AE5CAAE1C54614500D1BFC7 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB31C25F1BF00327E58 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AE5CAB01C54619200D1BFC7 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE5CAAF1C54619200D1BFC7 /* OHHTTPStubs.framework */; };
+		7AE5CAB11C54619600D1BFC7 /* OHHTTPStubs.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE5CAAF1C54619200D1BFC7 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7A8CFBD41C6029D50082F7C2 /* SwiftyJSON.framework in Copy Frameworks */,
+				7AE5CAB11C54619600D1BFC7 /* OHHTTPStubs.framework in Copy Frameworks */,
+				7AE5CAAD1C54614500D1BFC7 /* ReactiveCocoa.framework in Copy Frameworks */,
+				7AE5CAAE1C54614500D1BFC7 /* Result.framework in Copy Frameworks */,
 				7AB2DAAD1C25F05F00327E58 /* Nimble.framework in Copy Frameworks */,
 				7AB2DAAE1C25F05F00327E58 /* Quick.framework in Copy Frameworks */,
 			);
@@ -63,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A8CFBD21C6022170082F7C2 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
+		7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTokenSpec.swift; sourceTree = "<group>"; };
 		7AB2DA771C25EBC500327E58 /* BetaSeriesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BetaSeriesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB2DA7A1C25EBC500327E58 /* BetaSeriesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetaSeriesKit.h; sourceTree = "<group>"; };
 		7AB2DA7C1C25EBC500327E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +93,10 @@
 		7AB2DABB1C25F26D00327E58 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		7AB2DABD1C25F27E00327E58 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		7AB816331C30CB7800F3885D /* ClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSpec.swift; sourceTree = "<group>"; };
+		7ACD616A1C5ED43500B4E2CC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		7AE5CAAF1C54619200D1BFC7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +106,7 @@
 			files = (
 				7AB2DAB41C25F1BF00327E58 /* ReactiveCocoa.framework in Frameworks */,
 				7AB2DAB51C25F1BF00327E58 /* Result.framework in Frameworks */,
+				7ACD616D1C5ED5DD00B4E2CC /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +115,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB2DAA21C25EDAC00327E58 /* BetaSeriesKit.framework in Frameworks */,
+				7AE5CAB01C54619200D1BFC7 /* OHHTTPStubs.framework in Frameworks */,
 				7AB2DAAA1C25F04000327E58 /* Nimble.framework in Frameworks */,
+				7ACD616E1C5ED60500B4E2CC /* SwiftyJSON.framework in Frameworks */,
 				7AB2DAAB1C25F04000327E58 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A8CFBD11C6021FD0082F7C2 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				7A8CFBD21C6022170082F7C2 /* RequestToken.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		7AB2DA6D1C25EBC500327E58 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +155,13 @@
 		7AB2DA791C25EBC500327E58 /* BetaSeriesKit */ = {
 			isa = PBXGroup;
 			children = (
+				7A8CFBD11C6021FD0082F7C2 /* Request */,
 				7AB2DA7A1C25EBC500327E58 /* BetaSeriesKit.h */,
 				7AB2DA7C1C25EBC500327E58 /* Info.plist */,
 				7AB2DAB01C25F0D600327E58 /* Client.swift */,
-				7AB2DAB91C25F25200327E58 /* Member.swift */,
-				7AB2DABB1C25F26D00327E58 /* Episode.swift */,
-				7AB2DABD1C25F27E00327E58 /* Show.swift */,
+				7ADD05181C6032E60059EFAF /* Model */,
 				7AE5CAA81C54570A00D1BFC7 /* Helpers.swift */,
+				7ACD616A1C5ED43500B4E2CC /* Request.swift */,
 			);
 			path = BetaSeriesKit;
 			sourceTree = "<group>";
@@ -141,6 +171,7 @@
 			children = (
 				7AB2DAA11C25EDAC00327E58 /* Info.plist */,
 				7AB816331C30CB7800F3885D /* ClientSpec.swift */,
+				7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */,
 			);
 			path = BetaSeriesKitTests;
 			sourceTree = "<group>";
@@ -148,12 +179,24 @@
 		7AB2DAAF1C25F08F00327E58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */,
+				7AE5CAAF1C54619200D1BFC7 /* OHHTTPStubs.framework */,
 				7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */,
 				7AB2DAB31C25F1BF00327E58 /* Result.framework */,
 				7AB2DA921C25EC1C00327E58 /* Nimble.framework */,
 				7AB2DA931C25EC1C00327E58 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ADD05181C6032E60059EFAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AB2DAB91C25F25200327E58 /* Member.swift */,
+				7AB2DABB1C25F26D00327E58 /* Episode.swift */,
+				7AB2DABD1C25F27E00327E58 /* Show.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB2DAB11C25F0D600327E58 /* Client.swift in Sources */,
+				7ACD616B1C5ED43500B4E2CC /* Request.swift in Sources */,
+				7A8CFBD31C6022170082F7C2 /* RequestToken.swift in Sources */,
 				7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */,
 				7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */,
 				7AE5CAA91C54570A00D1BFC7 /* Helpers.swift in Sources */,
@@ -278,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8CFBD61C6029F30082F7C2 /* RequestTokenSpec.swift in Sources */,
 				7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +436,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -412,6 +459,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -429,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -445,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
