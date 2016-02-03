@@ -18,7 +18,7 @@ class RequestTokenSpec: QuickSpec {
     override func spec() {
         describe("Requesting Token") {
             beforeEach({ () -> () in
-                stub(isHost("betaseries.com") && isMethodPOST()) { (request) -> OHHTTPStubsResponse in
+                stub(isHost("betaseries.com") && isMethodPOST() && isPath("/members/access_token")) { (request) -> OHHTTPStubsResponse in
                     OHHTTPStubsResponse(JSONObject: ["token": "superdupertoken"], statusCode: 200, headers: nil)
                 }
             })

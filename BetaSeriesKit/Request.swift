@@ -64,7 +64,7 @@ extension Request {
         if let token = token {
             request.setValue(token, forHTTPHeaderField: "X-BetaSeries-Token")
         }
-        
+        print(url)
         return session
             .rac_dataWithRequest(request)
             .map({ return ObjectModel(payload: JSON(data: $0.0)) })

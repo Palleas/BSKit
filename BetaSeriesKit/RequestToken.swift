@@ -21,7 +21,7 @@ public class RequestTokenModel: Model {
 public class RequestToken: NSObject, Request {
     typealias ObjectModel = RequestTokenModel
     
-    var endpoint = "/lol"
+    var endpoint = "/members/access_token"
     
     var method: RequestMethod = .Post
 

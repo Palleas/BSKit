@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A75B99B1C61748C000D958E /* member_infos.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A75B99A1C61748C000D958E /* member_infos.json */; };
+		7A75B99D1C6174FC000D958E /* FetchMemberInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A75B99C1C6174FC000D958E /* FetchMemberInfos.swift */; };
+		7A75B99F1C617723000D958E /* FetchMemberInfosSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A75B99E1C617723000D958E /* FetchMemberInfosSpec.swift */; };
 		7A8CFBD31C6022170082F7C2 /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CFBD21C6022170082F7C2 /* RequestToken.swift */; };
 		7A8CFBD41C6029D50082F7C2 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD616C1C5ED5DD00B4E2CC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A8CFBD61C6029F30082F7C2 /* RequestTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */; };
@@ -21,7 +24,6 @@
 		7AB2DAB51C25F1BF00327E58 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB31C25F1BF00327E58 /* Result.framework */; };
 		7AB2DAB71C25F1D200327E58 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AB2DAB81C25F1D300327E58 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB31C25F1BF00327E58 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7AB2DABA1C25F25200327E58 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DAB91C25F25200327E58 /* Member.swift */; };
 		7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABB1C25F26D00327E58 /* Episode.swift */; };
 		7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABD1C25F27E00327E58 /* Show.swift */; };
 		7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB816331C30CB7800F3885D /* ClientSpec.swift */; };
@@ -77,6 +79,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A75B99A1C61748C000D958E /* member_infos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = member_infos.json; sourceTree = "<group>"; };
+		7A75B99C1C6174FC000D958E /* FetchMemberInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchMemberInfos.swift; sourceTree = "<group>"; };
+		7A75B99E1C617723000D958E /* FetchMemberInfosSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchMemberInfosSpec.swift; sourceTree = "<group>"; };
 		7A8CFBD21C6022170082F7C2 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
 		7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTokenSpec.swift; sourceTree = "<group>"; };
 		7AB2DA771C25EBC500327E58 /* BetaSeriesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BetaSeriesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +94,6 @@
 		7AB2DAB01C25F0D600327E58 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		7AB2DAB31C25F1BF00327E58 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		7AB2DAB91C25F25200327E58 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7AB2DABB1C25F26D00327E58 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		7AB2DABD1C25F27E00327E58 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		7AB816331C30CB7800F3885D /* ClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSpec.swift; sourceTree = "<group>"; };
@@ -125,10 +129,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A75B9991C617474000D958E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A75B99A1C61748C000D958E /* member_infos.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7A8CFBD11C6021FD0082F7C2 /* Request */ = {
 			isa = PBXGroup;
 			children = (
 				7A8CFBD21C6022170082F7C2 /* RequestToken.swift */,
+				7A75B99C1C6174FC000D958E /* FetchMemberInfos.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -169,9 +182,11 @@
 		7AB2DA9E1C25EDAC00327E58 /* BetaSeriesKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				7A75B9991C617474000D958E /* Resources */,
 				7AB2DAA11C25EDAC00327E58 /* Info.plist */,
 				7AB816331C30CB7800F3885D /* ClientSpec.swift */,
 				7A8CFBD51C6029F30082F7C2 /* RequestTokenSpec.swift */,
+				7A75B99E1C617723000D958E /* FetchMemberInfosSpec.swift */,
 			);
 			path = BetaSeriesKitTests;
 			sourceTree = "<group>";
@@ -192,7 +207,6 @@
 		7ADD05181C6032E60059EFAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7AB2DAB91C25F25200327E58 /* Member.swift */,
 				7AB2DABB1C25F26D00327E58 /* Episode.swift */,
 				7AB2DABD1C25F27E00327E58 /* Show.swift */,
 			);
@@ -299,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A75B99B1C61748C000D958E /* member_infos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +326,11 @@
 			files = (
 				7AB2DAB11C25F0D600327E58 /* Client.swift in Sources */,
 				7ACD616B1C5ED43500B4E2CC /* Request.swift in Sources */,
+				7A75B99D1C6174FC000D958E /* FetchMemberInfos.swift in Sources */,
 				7A8CFBD31C6022170082F7C2 /* RequestToken.swift in Sources */,
 				7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */,
 				7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */,
 				7AE5CAA91C54570A00D1BFC7 /* Helpers.swift in Sources */,
-				7AB2DABA1C25F25200327E58 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8CFBD61C6029F30082F7C2 /* RequestTokenSpec.swift in Sources */,
+				7A75B99F1C617723000D958E /* FetchMemberInfosSpec.swift in Sources */,
 				7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
