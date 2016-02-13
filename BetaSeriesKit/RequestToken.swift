@@ -29,9 +29,18 @@ public class RequestToken: NSObject, Request {
         return ["code": code]
     }
     
+    var params: [String: AnyObject]? {
+        return nil
+    }
+
     let code: String
 
     public init(code: String) {
         self.code = code
+    }
+    
+    func send(session: NSURLSession, baseURL: NSURL, key: String, token: String?) -> SignalProducer<RequestToken.ObjectModel, RequestError> {
+        return performRequest(session, baseURL: baseURL, key: key, token: token)
+            .mapObject(RequestTokenModel.self)
     }
 }

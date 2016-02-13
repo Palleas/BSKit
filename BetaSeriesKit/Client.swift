@@ -19,7 +19,8 @@ public class Client {
     }
     
     public func requestToken(code: String) -> SignalProducer<String?, ClientError> {
-        return RequestToken(code: code).send(NSURLSession.sharedSession(), baseURL: baseURL, key: key)
+        return RequestToken(code: code)
+            .send(NSURLSession.sharedSession(), baseURL: baseURL, key: key, token: nil)
             .map({ $0.token })
             .mapError({ _ in return ClientError.InternalError })
     }

@@ -10,7 +10,7 @@ import UIKit
 import ReactiveCocoa
 import SwiftyJSON
 
-enum RequestError: ErrorType {
+public enum RequestError: ErrorType {
     case InvalidURL
     case RequestError(wrapped: NSError)
 }
@@ -40,20 +40,28 @@ protocol Request {
     var endpoint: String { get }
     var method: RequestMethod { get }
     var body: [String: AnyObject]? { get }
+    var params: [String: AnyObject]? { get }
     
+    func send(session: NSURLSession, baseURL: NSURL, key: String, token: String?) -> SignalProducer<ObjectModel, RequestError>
 }
 
 extension Request {
-    func send(session: NSURLSession, baseURL: NSURL, key: String, token: String? = nil) -> SignalProducer<ObjectModel, RequestError> {
+    func performRequest(session: NSURLSession, baseURL: NSURL, key: String, token: String?) -> SignalProducer<NSData, RequestError> {
         guard let components = NSURLComponents(URL: baseURL, resolvingAgainstBaseURL: true) else {
             return SignalProducer(error: RequestError.InvalidURL)
         }
         
         components.path = endpoint
         
+        if let params = params {
+            components.queryItems = params.map({ NSURLQueryItem(name: $0.0, value: "\($0.1)") })
+        }
+        
         guard let url = components.URL else {
             return SignalProducer(error: RequestError.InvalidURL)
         }
+        
+        print(url)
         
         let request = NSMutableURLRequest(URL: url)
         request.cachePolicy = .ReloadIgnoringLocalCacheData
@@ -64,10 +72,10 @@ extension Request {
         if let token = token {
             request.setValue(token, forHTTPHeaderField: "X-BetaSeries-Token")
         }
-        print(url)
+
         return session
             .rac_dataWithRequest(request)
-            .map({ return ObjectModel(payload: JSON(data: $0.0)) })
+            .map({ $0.0 })
             .mapError({ return RequestError.RequestError(wrapped: $0) })
     }
     
