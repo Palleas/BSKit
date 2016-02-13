@@ -13,6 +13,7 @@ import SwiftyJSON
 public enum RequestError: ErrorType {
     case InvalidURL
     case RequestError(wrapped: NSError)
+    case NotFound
 }
 
 enum RequestMethod {
@@ -35,7 +36,7 @@ protocol Model {
 
 protocol Request {
     
-    typealias ObjectModel: Model
+    typealias ObjectModel
     
     var endpoint: String { get }
     var method: RequestMethod { get }

@@ -40,7 +40,7 @@ class FetchEpisodesSpec: QuickSpec {
                             expect(episode.title).to(equal("Rose"))
                             expect(episode.season).to(equal(1))
                             expect(episode.episode).to(equal(1))
-                            expect(episode.summary).to(beginWith("Rose Tyler rencontre un"))
+                            expect(episode.summary).to(beginWith("Rose Tyler"))
                             expect(episode.seen).to(beTrue())
                             
                             done()
