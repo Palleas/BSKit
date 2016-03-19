@@ -62,14 +62,18 @@ extension Request {
             return SignalProducer(error: RequestError.InvalidURL)
         }
         
-        print(url)
-        
         let request = NSMutableURLRequest(URL: url)
         request.cachePolicy = .ReloadIgnoringLocalCacheData
         request.setValue(key, forHTTPHeaderField: "X-BetaSeries-Key")
         request.setValue("2.4", forHTTPHeaderField: "X-BetaSeries-Version")
         request.HTTPMethod = method.description
         
+        if let body = body where method == .Post {
+            let component = NSURLComponents()
+            component.queryItems = body.map({ NSURLQueryItem(name: $0.0, value: "\($0.1)") })
+            request.HTTPBody = component.query?.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        }
+
         if let token = token {
             request.setValue(token, forHTTPHeaderField: "X-BetaSeries-Token")
         }

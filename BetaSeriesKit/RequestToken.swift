@@ -26,16 +26,22 @@ public class RequestToken: NSObject, Request {
     var method: RequestMethod = .Post
 
     var body: [String: AnyObject]? {
-        return ["code": code]
+        return ["client_id": clientId, "client_secret": clientSecret, "redirect_uri": redirectURI, "code": code]
     }
     
     var params: [String: AnyObject]? {
         return nil
     }
 
+    let clientId: String
+    let clientSecret: String
+    let redirectURI: String
     let code: String
 
-    public init(code: String) {
+    public init(clientId: String, clientSecret: String, redirectURI: String, code: String) {
+        self.clientId = clientId
+        self.clientSecret = clientSecret
+        self.redirectURI = redirectURI
         self.code = code
     }
     

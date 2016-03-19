@@ -12,21 +12,21 @@ public class Client {
     let baseURL = NSURL(string: "https://api.betaseries.com")!
     let key: String
     
-    private lazy var browserPipe = Signal<NSURL, NoError>.pipe()
+    private static let browserPipe = Signal<NSURL, ClientError>.pipe()
     
-    init(key: String) {
+    public init(key: String) {
         self.key = key
     }
     
-    public func requestToken(code: String) -> SignalProducer<String?, ClientError> {
-        return RequestToken(code: code)
+    public func requestToken(code: String, secret: String) -> SignalProducer<String?, ClientError> {
+        return RequestToken(clientId: key, clientSecret: secret, redirectURI: "rewatch://oauth/handle", code: code)
             .send(NSURLSession.sharedSession(), baseURL: baseURL, key: key, token: nil)
             .map({ $0.token })
             .mapError({ _ in return ClientError.InternalError })
     }
 
-    func authorize() -> SignalProducer<String?, NoError> {
-        let comps = NSURLComponents(URL: baseURL, resolvingAgainstBaseURL: true)!
+    public func authorize() -> SignalProducer<String?, ClientError> {
+        let comps = NSURLComponents(URL: NSURL(string: "https://www.betaseries.com")!, resolvingAgainstBaseURL: true)!
         comps.path = "/authorize"
         
         var items = [NSURLQueryItem]()
@@ -39,7 +39,30 @@ public class Client {
             UIApplication.sharedApplication().openURL(url)
         }
 
-        let urlSignal = browserPipe.0.map({ codeFromURL($0) })
+        let urlSignal = Client.browserPipe.0.map({ codeFromURL($0) })
         return SignalProducer(signal: urlSignal)
+    }
+    
+    public func authenticate(secret: String) -> SignalProducer<AuthenticatedClient, ClientError> {
+        return authorize().flatMap(FlattenStrategy.Latest) { (code) -> SignalProducer<AuthenticatedClient, ClientError> in
+            guard let code = code else {
+                return SignalProducer(error: .InvalidCode)
+            }
+            
+            return self
+                .requestToken(code, secret: secret)
+                .flatMap(.Latest) { (token) -> SignalProducer<AuthenticatedClient, ClientError> in
+                    if let token = token {
+                        return SignalProducer(value: AuthenticatedClient(key: self.key, token: token))
+                    }
+                    
+                    return SignalProducer(error: ClientError.InvalidToken)
+                }
+                    
+        }
+    }
+    
+    public static func completeSignIn(callbackURL: NSURL) {
+        Client.browserPipe.1.sendNext(callbackURL)
     }
 }

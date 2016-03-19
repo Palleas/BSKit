@@ -25,7 +25,7 @@ class RequestTokenSpec: QuickSpec {
             
             it("should fetch a token") {
                 waitUntil(timeout: 5) { done in
-                    RequestToken(code: "code")
+                    RequestToken(clientId: "client-id", clientSecret: "client-secret", redirectURI: "redirect-uri", code: "code")
                         .send(NSURLSession.sharedSession(), baseURL: NSURL(string: "https://betaseries.com")!, key: "key", token: "token")
                         .on(failed: { _ in done() })
                         .startWithNext { model in
