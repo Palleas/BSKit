@@ -1,13 +1,13 @@
 import Foundation
 import SwiftyJSON
 
-struct Episode: Model {
-    let id: Int
-    let title: String
-    let episode: Int
-    let season: Int
-    let summary: String
-    let seen: Bool
+public struct Episode: Model {
+    public let id: Int
+    public let title: String
+    public let episode: Int
+    public let season: Int
+    public let summary: String
+    public let seen: Bool
     
     init(payload: JSON) {
         id = payload["id"].intValue

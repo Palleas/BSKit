@@ -14,11 +14,13 @@ public class Member: Model {
     public let id: Int
     public let login: String
     public let avatar: NSURL?
+    public let shows: [Show]
 
     required public init(payload: JSON) {
         id = payload["member"]["id"].intValue
         login = payload["member"]["login"].stringValue
         avatar = payload["member"]["avatar"].URL
+        shows = payload["member"]["shows"].arrayValue.map { Show(payload: $0) }
     }
 }
 

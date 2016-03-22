@@ -1,6 +1,12 @@
 import Foundation
+import SwiftyJSON
 
-struct Show {
-    let id: Int
-    let name: String
+public struct Show {
+    public let id: Int
+    public let name: String
+    
+    init(payload: JSON) {
+        self.id = payload["id"].intValue
+        self.name = payload["name"].stringValue
+    }
 }
