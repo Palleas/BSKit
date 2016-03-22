@@ -15,7 +15,7 @@ public class AuthenticatedClient: NSObject {
         case InternalError(actualError: RequestError)
     }
     
-    private static let baseURL = NSURL(string: "https://www.betaseries.com")!
+    private static let baseURL = NSURL(string: "https://api.betaseries.com")!
     
     let key: String
     public let token: String
