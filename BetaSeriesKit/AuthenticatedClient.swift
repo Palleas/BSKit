@@ -35,8 +35,8 @@ public class AuthenticatedClient: NSObject {
         }
     }
     
-    public func fetchEpisodes(show: Show) -> SignalProducer<Episode, AuthenticatedClientError> {
-        let request = FetchEpisodes(id: show.id)
+    public func fetchEpisodes(id: Int) -> SignalProducer<Episode, AuthenticatedClientError> {
+        let request = FetchEpisodes(id: id)
             .send(NSURLSession.sharedSession(), baseURL: AuthenticatedClient.baseURL, key: key, token: token)
         
         return request.flatMapError {
