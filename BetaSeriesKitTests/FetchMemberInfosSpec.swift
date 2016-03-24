@@ -32,7 +32,11 @@ class FetchMemberInfosSpec: QuickSpec {
                             expect(model.id).to(equal(384698))
                             expect(model.login).to(equal("PalleasQc"))
                             expect(model.avatar).to(equal(NSURL(string: "https://www.betaseries.com/data/avatars/31/31565939ce458c380216a64f8e464535.jpg")))
-                            
+
+                            expect(model.shows.count).to(equal(14))
+                            expect(model.shows.first!.id).to(equal(5010))
+                            expect(model.shows.first!.title).to(equal("Arrow"))
+
                             done()
                         })
                 }
