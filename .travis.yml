@@ -4,4 +4,5 @@ before_install:
   - brew install carthage
   - brew update
   - brew uninstall xctool && brew install --HEAD xctool
-script: carthage update --platform ios && xctool -scheme BetaSeriesKit -sdk iphonesimulator test
+install: carthage update --platform ios
+script: xctool -scheme BetaSeriesKit -sdk iphonesimulator test
