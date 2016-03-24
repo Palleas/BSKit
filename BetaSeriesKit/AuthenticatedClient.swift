@@ -44,4 +44,11 @@ public class AuthenticatedClient: NSObject {
         }
     }
 
+    public func fetchImageForEpisode(id: Int, width: Int, height: Int) -> SignalProducer<UIImage, AuthenticatedClientError> {
+        return FetchEpisodePicture(id: id, width: width, height: height)
+            .send(NSURLSession.sharedSession(), baseURL: AuthenticatedClient.baseURL, key: key, token: token)
+            .flatMapError {
+                return SignalProducer(error: AuthenticatedClientError.InternalError(actualError: $0))
+            }
+    }
 }
