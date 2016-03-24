@@ -25,6 +25,14 @@ public class AuthenticatedClient: NSObject {
         self.token = token
     }
 
+    public func fetchMemberInfos() -> SignalProducer<Member, AuthenticatedClientError> {
+        return FetchMemberInfos()
+            .send(NSURLSession.sharedSession(), baseURL: AuthenticatedClient.baseURL, key: key, token: token)
+            .flatMapError {
+                return SignalProducer(error: AuthenticatedClientError.InternalError(actualError: $0))
+        }
+    }
+
     public func fetchShows() -> SignalProducer<Show, AuthenticatedClientError> {
         let request = FetchMemberInfos().send(NSURLSession.sharedSession(), baseURL: AuthenticatedClient.baseURL, key: key, token: token)
         
