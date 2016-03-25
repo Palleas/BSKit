@@ -26,7 +26,7 @@ public class Client {
     }
 
     public func authorize() -> SignalProducer<String?, ClientError> {
-        let comps = NSURLComponents(URL: NSURL(string: "https://api.betaseries.com/")!, resolvingAgainstBaseURL: true)!
+        let comps = NSURLComponents(URL: NSURL(string: "https://www.betaseries.com/")!, resolvingAgainstBaseURL: true)!
         comps.path = "/authorize"
         
         var items = [NSURLQueryItem]()
