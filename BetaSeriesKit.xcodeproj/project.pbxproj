@@ -34,10 +34,6 @@
 		7AB2DAAD1C25F05F00327E58 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DA921C25EC1C00327E58 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AB2DAAE1C25F05F00327E58 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DA931C25EC1C00327E58 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AB2DAB11C25F0D600327E58 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DAB01C25F0D600327E58 /* Client.swift */; };
-		7AB2DAB41C25F1BF00327E58 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */; };
-		7AB2DAB51C25F1BF00327E58 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB31C25F1BF00327E58 /* Result.framework */; };
-		7AB2DAB71C25F1D200327E58 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB21C25F1BF00327E58 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7AB2DAB81C25F1D300327E58 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB2DAB31C25F1BF00327E58 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AB2DABC1C25F26D00327E58 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABB1C25F26D00327E58 /* Episode.swift */; };
 		7AB2DABE1C25F27E00327E58 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2DABD1C25F27E00327E58 /* Show.swift */; };
 		7AB816341C30CB7800F3885D /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB816331C30CB7800F3885D /* ClientSpec.swift */; };
@@ -81,18 +77,6 @@
 				7AE5CAAE1C54614500D1BFC7 /* Result.framework in Copy Frameworks */,
 				7AB2DAAD1C25F05F00327E58 /* Nimble.framework in Copy Frameworks */,
 				7AB2DAAE1C25F05F00327E58 /* Quick.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7AB2DAB61C25F1C500327E58 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7AB2DAB71C25F1D200327E58 /* ReactiveCocoa.framework in Copy Frameworks */,
-				7AB2DAB81C25F1D300327E58 /* Result.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,8 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB2DAB41C25F1BF00327E58 /* ReactiveCocoa.framework in Frameworks */,
-				7AB2DAB51C25F1BF00327E58 /* Result.framework in Frameworks */,
 				7ACD616D1C5ED5DD00B4E2CC /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +302,6 @@
 				7AB2DA731C25EBC500327E58 /* Frameworks */,
 				7AB2DA741C25EBC500327E58 /* Headers */,
 				7AB2DA751C25EBC500327E58 /* Resources */,
-				7AB2DAB61C25F1C500327E58 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -699,6 +680,7 @@
 				7A8451A51C7D0E930077DC77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AB2DA711C25EBC500327E58 /* Build configuration list for PBXProject "BetaSeriesKit" */ = {
 			isa = XCConfigurationList;
