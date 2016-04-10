@@ -36,7 +36,7 @@ protocol Model {
 
 protocol Request {
     
-    typealias ObjectModel
+    associatedtype ObjectModel
     
     var endpoint: String { get }
     var method: RequestMethod { get }
