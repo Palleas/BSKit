@@ -25,7 +25,7 @@ public class Client {
             .mapError({ _ in return ClientError.InternalError })
     }
 
-    public func authorize() -> SignalProducer<String?, ClientError> {
+    func generateAuthorizeURL() -> NSURL? {
         let comps = NSURLComponents(URL: NSURL(string: "https://www.betaseries.com/")!, resolvingAgainstBaseURL: true)!
         comps.path = "/authorize"
         
@@ -34,17 +34,18 @@ public class Client {
         items.append(NSURLQueryItem(name: "redirect_uri", value: "rewatch://oauth/handle"))
         
         comps.queryItems = items
-        
-        if let url = comps.URL {
-            UIApplication.sharedApplication().openURL(url)
-        }
 
-        let urlSignal = Client.browserPipe.0.map({ codeFromURL($0) })
-        return SignalProducer(signal: urlSignal)
+        return comps.URL
     }
     
-    public func authenticate(secret: String) -> SignalProducer<AuthenticatedClient, ClientError> {
-        return authorize().flatMap(FlattenStrategy.Latest) { (code) -> SignalProducer<AuthenticatedClient, ClientError> in
+    public func authenticate(secret: String, handler: (NSURL) -> Void) -> SignalProducer<AuthenticatedClient, ClientError> {
+        guard let url = generateAuthorizeURL() else { return SignalProducer(error: .InternalError) }
+
+        let invocationSignal = SignalProducer(signal: Client.browserPipe.0.map({ codeFromURL($0) }))
+
+        handler(url)
+
+        return invocationSignal.flatMap(FlattenStrategy.Latest) { (code) -> SignalProducer<AuthenticatedClient, ClientError> in
             guard let code = code else {
                 return SignalProducer(error: .InvalidCode)
             }
