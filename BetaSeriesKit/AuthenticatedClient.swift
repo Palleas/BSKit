@@ -36,8 +36,9 @@ public class AuthenticatedClient: NSObject {
     public func fetchShows() -> SignalProducer<Show, AuthenticatedClientError> {
         let request = FetchMemberInfos().send(NSURLSession.sharedSession(), baseURL: AuthenticatedClient.baseURL, key: key, token: token)
         
-        let showsSignalProducer = request.flatMap(.Latest, transform: { return SignalProducer(values: $0.shows) })
-        
+        let showsSignalProducer = request.flatMap(.Latest) { (member) -> SignalProducer<Show, RequestError> in
+            return SignalProducer(values: member.shows)
+        }
         return showsSignalProducer.flatMapError {
             return SignalProducer(error: AuthenticatedClientError.InternalError(actualError: $0))
         }
